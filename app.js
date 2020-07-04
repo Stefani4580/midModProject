@@ -35,7 +35,7 @@ const givenWinner = (logo) => {
 };
 
 //created a function to have update of game 
-// using a constant variable due to that once moved made it is immutable. (Each turn). using 9 variables to see if there is mario pic or dk pic in each gamebox.
+// using a constant variable due to that once moved made it is immutable. (Each turn). using 9 variables to see if there is mario pic or bowser pic in each gamebox.
 //using [2] lets console know if its a mario pic or bowser pic (xRpresent, oRepresent)
 const updateGamePlay = () => {
     const topFirst = boxDivs[0].classList[2];
@@ -48,7 +48,6 @@ const updateGamePlay = () => {
     const bottomSecond = boxDivs[7].classList[2];
     const bottomThird = boxDivs[8].classList[2];
 
-// console.log(topFirst, topSecond, topThird, middleFirst, middleSecond, middleThird, bottomFirst, bottomSecond, bottomThird);
 
 // conditons in which how you win game
     //top first row matches 3 in a row
@@ -105,7 +104,7 @@ const updateGamePlay = () => {
       }
     };
 
-// event Handlers
+// Reset button for game
 const buttonReset = () => {
     marioTurn = true;
     actionDiv.innerHTML = `${xRepresent} is next`;
@@ -128,7 +127,7 @@ const actionBoxClick = (e) => {
     // // console.log("location", location);
     
     /* bottom first if statement runs nothing when indicated gamebox is already filled up.*/
-    if( !gameLetsAGo || classList[2] === 'x' || classList[2] === 'o'){
+    if( !gameLetsAGo || classList[2] === 'mariopic' || classList[2] === 'bowserpic'){
         return;  /*function ends returns nothing*/
     }
     if (marioTurn) {

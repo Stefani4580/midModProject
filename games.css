@@ -1,0 +1,273 @@
+/* CSS for gamplay logos etc */
+@font-face {
+    src:url(/fonts/MarioAndLuigi-K0J7.ttf);
+    font-family: 'roboto';
+} 
+@font-face {
+  src: url(/fonts/SuperMarioBros-ov7d.ttf);
+  font-family: 'courier';
+}
+  
+body{
+  background:url(/img/supermariobackground.png);
+  background-size: cover;
+  background-size: 520px;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  margin-top: 65px;
+  font-family: 'courier';
+  font-size: 50pt;
+}
+  /* reference on MDN on using root */
+:root {
+  --joycon-left:#04C4D9;
+  --joycon-right: #F22E38;
+  --btn: #262525;
+}
+  
+.box {
+  position: relative;
+  margin: 15% auto;
+  width: 902px;
+  height: 384px;
+}
+  
+.container-action{         /* restart and game turn */
+    display: flex; 
+    margin-top: 25px;
+    font-size: 30px;
+    justify-content: space-around;
+}
+.restart{
+    cursor: pointer;
+}
+.restart:hover{
+    color: palegoldenrod;
+}
+.mariopic::after {      /*mario logo */
+    content: 'r';            
+    font-size: 50px;
+    color: rgb(75, 26, 13);
+    font-family: 'roboto';
+  
+  }
+  .bowserpic::after{     /*mario logo*/
+     content:'b';
+     font-size: 50px;
+     color: #F2BB16;
+     font-family: 'roboto';
+  }
+  
+  
+  /* switch console css  */
+  /* switch container */
+  .switch-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  }
+  /* blue joystick code */
+  .joystick-left {
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  background: var(--joycon-left);
+  border-top-left-radius: 80px;   /*makes curve shape on top of left joystick*/
+  border-bottom-left-radius: 80px;  /*makes curve shape on bottom of left joystick*/
+  box-shadow: inset 5px 5px 10px var(--joycon-left), inset 7px 15px 5px -5px rgba(255,255,255,.6), inset 10px -35px 8px -25px rgba(0,0,0,.4), inset 12px 0px 10px -5px rgba(0,0,0,.4);
+  }
+  
+
+/* red joystick code */
+  .joystick-right {
+  position: absolute;
+  right: 0;   /*sets the right edge of an element to right of the right edge of its nearest positioned parent*/
+  width: 15%;
+  height: 100%;
+  background: var(--joycon-right);
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  box-shadow: inset -5px 5px 10px var(--joycon-right), inset -7px 15px 5px -5px rgba(255,255,255,.4), inset -10px -35px 8px -25px rgba(0,0,0,.3), inset -14px 0px 10px -5px rgba(0,0,0,.3);
+  }
+  
+ /* faded grey screen */
+  .screen-outer {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  left: 15%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  background: linear-gradient(to bottom, #2E3235, #414344);
+  box-shadow: inset 0 15px 20px -10px rgba(255,255,255,.6), inset 0 -21px 20px -10px rgba(0,0,0,.8);
+  }
+
+  /* dark glossy screen */
+  .screen-inner {
+  position: absolute;
+  width: 93%;
+  height: 94%;
+  background: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 17px;
+  box-shadow: inset 0 2px 0 -1px rgba(255,255,255,.6), inset 0 -1px 0 -1px white;
+  }
+  
+  #tic-tac-toeGameGrid {
+  display: grid;
+  position: absolute;
+  width: 75%;
+  height: 85%;
+  background: #0DA192;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+  
+}
+  
+.game-box{
+   display: flex;
+   background: #14BDAC;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+    
+}
+  
+.analog-left {
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  width: 45%;
+  height: 16%;
+  background: linear-gradient(to bottom, #5e6367 0%,#141516 100%);
+  border-radius: 50%;
+  }
+  
+  /* entire blue dpad */
+  .dpad-wrapper-left {
+  position: absolute;
+  top: 45%;
+  left: 19%;
+  width: 70%;
+  height: 25%;
+  }
+  
+  .dpadup-btn {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: var(--btn); /*need to lookup*/
+  border-radius: 50%; /*make a circle shape*/
+  left: 50%;
+  /* check bottom codee */
+  transform: translateX(-50%);
+  }
+  
+  .dpadright-btn {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: var(--btn);
+  border-radius: 50%;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  }
+  
+  .dpaddown-btn {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: var(--btn);
+  border-radius: 50%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  }
+  
+ 
+  .dpadleft-btn {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: var(--btn);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  }
+  
+  
+  .dpad-wrapper-right {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 25%;
+  }
+  
+  .dpadX-btn {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: var(--btn);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  
+  .dpadA-btn {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: var(--btn);
+  border-radius: 50%;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  }
+  
+  .dpadB-btn {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: var(--btn);
+  border-radius: 50%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  }
+  
+  
+  .dpadY-btn {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: var(--btn);
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  }
+  
+  .analog-right {
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  width: 45%;
+  height: 16%;
+   /*check bottom code  */
+  background: linear-gradient(to bottom, #5e6367 0%,#141516 100%);
+  border-radius: 50%;
+  
+  }
+
+/* Reference */
+  /* background for linear gradient for switch styling was reference from https://www.webfx.com/blog/images/assets/cdn.sixrevisions.com/0457-01-css-box-shadow-demo/demo.html, color frim linear gradient was taken from adoe colors */
