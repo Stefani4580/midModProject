@@ -9,9 +9,10 @@
 }
   
 body{
-  background:url(/img/supermariobackground.png);
+  background:url(/img/backgroungimage.jpg);
   background-size: cover;
   background-size: 520px;
+ 
 }
 h1{
   display: flex;
@@ -24,7 +25,7 @@ h1{
 :root {
   --joycon-left:#04C4D9;
   --joycon-right: #F22E38;
-  --btn: #262525;
+  --btn: #0f0e0e;
 }
   
 .box {
@@ -89,6 +90,7 @@ h1{
   background: var(--joycon-right);
   border-top-right-radius: 80px;
   border-bottom-right-radius: 80px;
+  /* the 3d image viewing, reference to css tricks and mdn */
   box-shadow: inset -5px 5px 10px var(--joycon-right), inset -7px 15px 5px -5px rgba(255,255,255,.4), inset -10px -35px 8px -25px rgba(0,0,0,.3), inset -14px 0px 10px -5px rgba(0,0,0,.3);
   }
   

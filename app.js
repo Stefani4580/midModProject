@@ -1,8 +1,10 @@
 // I will be using querySelector to return the element that mataches a css selector
 // using constant to declare variables su to there is no mutuation will be taken.
-
+//turn status and reset button
 const actionDiv = document.querySelector('.container-action');
+// reset button 
 const resetDiv = document.querySelector('.restart');
+//individual 9 boxes 
 const boxDivs = document.querySelectorAll('.game-box')
 
 
@@ -22,8 +24,11 @@ const oRepresent = 'Bowser';
 // }else{
 //     return oRepresent;
 // };
-// functions
-const characterLogo = (logo) => logo === 'mariopic' ? xRepresent : oRepresent;
+// used a ternary operator
+function characterLogo (logo) {
+
+ return (logo === 'mariopic' ? xRepresent : oRepresent);
+}
 
 const givenWinner = (logo) => {
   gameLetsAGo = false;
@@ -94,7 +99,7 @@ const updateGamePlay = () => {
       } else if (topFirst && topSecond && topThird && middleFirst && middleSecond && middleThird &&bottomFirst && bottomSecond && bottomThird) {
         gameLetsAGo = false;
         actionDiv.innerHTML = 'Game is a tie!';
-      } else {
+      } else {   /* */
         marioTurn = !marioTurn;
         if (marioTurn) {
           actionDiv.innerHTML = `${xRepresent} is next` ;
