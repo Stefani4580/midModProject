@@ -26,7 +26,7 @@ const oRepresent = 'Bowser';
 // };
 // used a ternary operator
 function characterLogo (logo) {
-
+// if logo is mario it will represent x othwrwise it will o to represent broswer
  return (logo === 'mariopic' ? xRepresent : oRepresent);
 }
 
@@ -116,14 +116,14 @@ const buttonReset = () => {
     for (const boxDiv of boxDivs) {
       boxDiv.classList.remove('mariopic');
       boxDiv.classList.remove('browserpic');
-      boxDiv.classList.remove('won');
+      boxDiv.classList.remove('gameWon');
     }
     gameLetsAGo = true;
   };
         
-//function defined for event listener
+// //function defined for event listener
 // const actionReset = (e) => {
-//     console.log(e);
+    
 // };
 const actionBoxClick = (e) => {
     const classList = e.target.classList; /*declared a variable class list for traget of each boxDiv*/
@@ -157,3 +157,5 @@ for (const boxDiv of boxDivs){
 }
 
 
+// Challenges I wish to fix or update. 
+// Reset button, functionality of nintendo switch buttons, more animation, modal box for start game/instructions

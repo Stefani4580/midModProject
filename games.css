@@ -27,7 +27,6 @@ h1{
   --joycon-right: #F22E38;
   --btn: #0f0e0e;
 }
-  
 .box {
   position: relative;
   margin: 15% auto;
@@ -60,7 +59,10 @@ h1{
      color: #F2BB16;
      font-family: 'roboto';
   }
-  
+  /* once 3 in a row indicates a green status of winning logo */
+  .gameWon::after {
+    color:green;
+  }
   
   /* switch console css  */
   /* switch container */
