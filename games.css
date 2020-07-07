@@ -114,7 +114,7 @@ h1{
   background: black;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /*allows rotation to property*/
   border-radius: 17px;
   box-shadow: inset 0 2px 0 -1px rgba(255,255,255,.6), inset 0 -1px 0 -1px white;
   }
@@ -272,4 +272,6 @@ h1{
   }
 
 /* Reference */
-  /* background for linear gradient for switch styling was reference from https://www.webfx.com/blog/images/assets/cdn.sixrevisions.com/0457-01-css-box-shadow-demo/demo.html, color frim linear gradient was taken from adoe colors */
+  /* background for linear gradient for switch styling was reference from https://www.webfx.com/blog/images/assets/cdn.sixrevisions.com/0457-01-css-box-shadow-demo/demo.html, color frim linear gradient was taken from adoe colors 
+  transform property applies a 2D or 3D transformation. Gives switch pop out animation.  Allows you to rotate, scale, move, skew
+  */
